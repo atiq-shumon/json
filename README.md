@@ -15,7 +15,7 @@ BulkRequisitionBillApproval billmaster = new SDBulkRequisitionBillBLL().GetBulkB
  
  ````
  
- # deserialise in js/angular
+ # deserialise and parse in js/angular
  ```
  let data=JSON.parse(this.requisitionstring);
  
