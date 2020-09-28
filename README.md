@@ -9,13 +9,13 @@ BulkRequisitionBillApproval billmaster = new SDBulkRequisitionBillBLL().GetBulkB
             List<DOBreakDown> billdetails = billmaster.dobreakdowndetailslist;
 ``` 
 
-# serilise
+# serialise
 ```
  fields.Add(new BulkDORequisitionFieldJson("bulkdorequisionId", "DO Requisition", JsonConvert.SerializeObject(billmaster), "f fill-remaining-space", new Validation("false"), "", "false"));
  
  ````
  
- #deserilise
+ # deserialise
  ```
  let data=JSON.parse(this.requisitionstring);
  
