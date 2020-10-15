@@ -20,3 +20,32 @@ BulkRequisitionBillApproval billmaster = new SDBulkRequisitionBillBLL().GetBulkB
  let data=JSON.parse(this.requisitionstring);
  
  ```
+ 
+ ### Another example
+ ```C#
+ //Create my object
+        var my_jsondata = new
+        {
+            Host = @"sftp.myhost.gr",
+            UserName = "my_username",
+            Password = "my_password",
+            SourceDir = "/export/zip/mypath/",
+            FileName = "my_file.zip"
+        };
+
+        //Tranform it to Json object
+        string json_data = JsonConvert.SerializeObject(my_jsondata);
+
+        //Print the Json object
+        Console.WriteLine(json_data);
+
+        //Parse the json object
+        JObject json_object = JObject.Parse(json_data);
+
+        //Print the parsed Json object
+        Console.WriteLine((string)json_object["Host"]);
+        Console.WriteLine((string)json_object["UserName"]);
+        Console.WriteLine((string)json_object["Password"]);
+        Console.WriteLine((string)json_object["SourceDir"]);
+        Console.WriteLine((string)json_object["FileName"]);
+     ```   
